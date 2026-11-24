@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Completo | Idols Cosmetics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">IDOLS <span>COSMETICS</span></a>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html" class="active">Menú Completo</a></li>
+                    <li><a href="ropa.html">Ropa</a></li>
+                    <li><a href="zapatos.html">Zapatos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-section">
+        <div class="catalog-header">
+            <h1>Menú Completo de Colecciones</h1>
+            <a href="index.html" class="btn-secondary">← Volver al Inicio</a>
+        </div>
+        <p style="color: #a0a0ab; margin-bottom: 2rem;">Explora todas nuestras líneas de ropa y calzado disponibles.</p>
+        
+        <div class="products-grid" id="products-grid"></div>
+    </main>
+
+    <!-- Mismo carrito sincronizado gracias a localStorage -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total a pagar:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-whatsapp-checkout" id="checkout-whatsapp">
+                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+            <button class="btn-clear-cart" id="clear-cart">Vaciar Carrito</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>

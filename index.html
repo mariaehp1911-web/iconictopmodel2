@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idols Cosmetics | Ropa y Zapatos</title>
+    <!-- Enlace al archivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome para redes sociales y carrito -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER Y BARRA DE NAVEGACIÓN -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">IDOLS <span>COSMETICS</span></a>
+
+            <!-- Barra de navegación con acceso a varios HTMLs -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="menu.html">Menú Completo</a></li>
+                    <li><a href="ropa.html">Ropa</a></li>
+                    <li><a href="zapatos.html">Zapatos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón del Carrito y Menú Móvil -->
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- BARRA DE PROMPT INTERACTIVO -->
+        <div class="prompt-bar">
+            <div class="prompt-container">
+                <i class="fas fa-sparkles prompt-icon"></i>
+                <input type="text" id="style-prompt" placeholder="Escribe lo que buscas (ej: 'botas negras', 'chaqueta', 'tacones', 'urbano')...">
+                <button id="prompt-btn">Buscar</button>
+                <button id="clear-prompt" class="clear-btn" title="Limpiar búsqueda">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">NUEVA COLECCIÓN 2026</span>
+            <h1>Define tu propio estilo con <span>Idols Cosmetics</span></h1>
+            <p>Moda urbana, calzado exclusivo y tendencias diseñadas para destacar en cada paso.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+                <a href="menu.html" class="btn-secondary">Ver Menú Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTROS RÁPIDOS Y CATÁLOGO DE PRODUCTOS -->
+    <main id="catalogo" class="catalog-section">
+        <div class="catalog-header">
+            <h2>Nuestros Productos</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="ropa">Ropa</button>
+                <button class="filter-btn" data-category="zapatos">Zapatos</button>
+            </div>
+        </div>
+
+        <p id="search-status" class="search-status"></p>
+
+        <!-- Contenedor donde JavaScript inyectará los productos -->
+        <div class="products-grid" id="products-grid"></div>
+    </main>
+
+    <!-- CARRITO DE COMPRAS LATERAL (DINÁMICO) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Productos del carrito cargados dinámicamente -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total a pagar:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-whatsapp-checkout" id="checkout-whatsapp">
+                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+            <button class="btn-clear-cart" id="clear-cart">Vaciar Carrito</button>
+        </div>
+    </aside>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/584120000000?text=Hola%20Idols%20Cosmetics,%20quisiera%20más%20información" 
+       class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER Y REDES SOCIALES -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>IDOLS <span>COSMETICS</span></h3>
+                <p>Tu destino favorito de ropa y calzado con actitud.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+                <a href="ropa.html">Ropa</a>
+                <a href="zapatos.html">Zapatos</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/584120000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Idols Cosmetics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript separado -->
+    <script src="script.js"></script>
+</body>
+</html>
